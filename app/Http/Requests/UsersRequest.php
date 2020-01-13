@@ -27,7 +27,12 @@ class UsersRequest extends FormRequest
             "email" => "bail|required|email|unique:users,email",
             "password" => "bail|min:6|required_with:password_confirmation|same:password_confirmation",
             "password_confirmation" => "min:6",
-            "role" => "bail|required|in:1,2,3,4,5"
+            "role" => "bail|required|in:1,2,3,4,5",
+            "school" => "bail|required|in:etna,f2i,ipssi",
+            "name" => "alpha",
+            "firstname" => "alpha",
+            "lastname" => "alpha",
+            "gender" => "in:m,f",
         ];
     }
 

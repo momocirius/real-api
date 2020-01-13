@@ -39,7 +39,7 @@ class UsersApiController extends Controller
      */
     public function register(UsersRequest $request)
     {
-        $userData = $request->only(["name", "email", "auth_token", "firstname", "lastname", "birthDay", "role", "gender", "phone", "adress", "company"]);
+        $userData = $request->only(["name", "email", "school", "auth_token", "firstname", "lastname", "birthDay", "role", "gender", "phone", "adress", "company"]);
         $userData["password"] = Hash::make($request->password);
         $user = new User();
         $user->create($userData);
@@ -64,7 +64,7 @@ class UsersApiController extends Controller
         ];
 
         if (auth()->attempt($credentials)) {
-            $token = auth()->user()->createToken('TutsForWeb')->accessToken;
+            $token = auth()->user()->createToken($request->email)->accessToken;
             return response()->json(['token' => $token], 200);
         } else {
             return response()->json(['error' => 'UnAuthorised'], 401);
@@ -117,7 +117,7 @@ class UsersApiController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+//
     }
 
     /**
