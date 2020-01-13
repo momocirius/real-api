@@ -25,7 +25,7 @@ class CreateDealsTable extends Migration
             $table->dateTime('end_date');
             $table->timestamps();
 
-            $table->foreign("id-author")
+            $table->foreign("id_author")
                 ->references("id")
                 ->on("users")
                 ->onDelete('cascade');
