@@ -29,10 +29,12 @@ https://whispering-harbor-79661.herokuapp.com/api/login?email=az1%40az1.com&pass
 pour Role [1-5]
 pour school ["etna", "f2i", "ipssi"]
 
-# Requete GET
+# Ex Requete GET
 http://127.0.0.1:8000/api/user
 
-
+#Link sur Heroku
+Attention bdd gratuite trouvé sur internet donc pas de controle dessus donc ne pas mettre des informations sensible
+https://whispering-harbor-79661.herokuapp.com
 
 ## License
 
