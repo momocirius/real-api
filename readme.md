@@ -7,8 +7,8 @@
 </p>
 
 ## How to test the api
-Composer install
-cd database/
+Composer install  <br>
+cd database/  <br>
 
 # Pour pouvoir tester sans mettre en place une base de données 
 touch database.sqlite <br>
