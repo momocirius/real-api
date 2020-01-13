@@ -11,26 +11,26 @@ Composer install
 cd database/
 
 # Pour pouvoir tester sans mettre en place une base de données 
-touch database.sqlite
-cd ..
-
-php artisan migrate
-php artisan passport:install
-php artisan passport:client --personal
-
-php artisan serve
+touch database.sqlite <br>
+cd .. <br>
+ <br>
+php artisan migrate <br>
+php artisan passport:install <br>
+php artisan passport:client --personal <br>
+ <br>
+php artisan serve <br>
 
 # Exemple de requete post
 http://127.0.0.1:8000/api/register?email=az1aa%40az1.com&password=azerty&password_confirmation=azerty&role=2&school=ipssi
-https://whispering-harbor-79661.herokuapp.com/api/login?email=az1%40az1.com&password=azerty
+https://whispering-harbor-79661.herokuapp.com/api/login?email=az1%40az1.com&password=azerty  <br>
 
 #autre param pour the registration
-"name", "email", "school", "auth_token", "firstname", "lastname", "birthDay", "role", "gender", "phone", "adress", "company"
-pour Role [1-5]
-pour school ["etna", "f2i", "ipssi"]
-
+"name", "email", "school", "auth_token", "firstname", "lastname", "birthDay", "role", "gender", "phone", "adress", "company" <br>
+pour Role [1-5] <br>
+pour school ["etna", "f2i", "ipssi"] <br>
+ <br>
 # Requete GET
-http://127.0.0.1:8000/api/user
+http://127.0.0.1:8000/api/user <br>
 
 
 
